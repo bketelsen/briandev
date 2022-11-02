@@ -9,12 +9,13 @@ import 'focus-visible'
 
 import { MDXProvider } from '@mdx-js/react'
 import  Pre  from '@/components/Pre'
-
+import { Callout } from '@/components/Callout'
 
 
 const components = {
 
   pre: Pre,
+  Callout: Callout,
 
 }
 
