@@ -1,0 +1,105 @@
+pre[class*='language-'] {
+  color: theme('colors.zinc.50');
+}
+
+.token.tag,
+.token.class-name,
+.token.selector,
+.token.selector .class,
+.token.selector.class,
+.token.function {
+  color: theme('colors.pink.400');
+}
+
+.token.attr-name,
+.token.keyword,
+.token.rule,
+.token.pseudo-class,
+.token.important {
+  color: theme('colors.indigo.300');
+}
+
+.token.module {
+  color: theme('colors.pink.400');
+}
+
+.token.attr-value,
+.token.class,
+.token.string,
+.token.property {
+  color: theme('colors.sky.300');
+}
+
+.token.punctuation,
+.token.attr-equals {
+  color: theme('colors.zinc.500');
+}
+
+.token.unit,
+.language-css .token.function {
+  color: theme('colors.teal.200');
+}
+
+.token.comment,
+.token.operator,
+.token.combinator {
+  color: theme('colors.amber.400');
+}
+.code-highlight {
+  @apply float-left min-w-full;
+}
+
+.code-line {
+  @apply -mx-4 block border-l-4 border-slate-700 border-opacity-0 pl-4 pr-4;
+}
+
+.code-line.inserted {
+  @apply bg-green-500 bg-opacity-20;
+}
+
+.code-line.deleted {
+  @apply bg-red-500 bg-opacity-20;
+}
+
+.highlight-line {
+  @apply -mx-4 border-l-4 border-teal-500 bg-zinc-700 bg-opacity-50;
+}
+
+.line-number::before {
+  @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-400;
+  content: attr(line);
+}
+/* Code title styles */
+.remark-code-title {
+  @apply rounded-t bg-slate-700 mb-0 px-5 py-3 font-mono text-sm font-bold text-zinc-200;
+}
+
+.remark-code-title + div > pre {
+  @apply !mb-0 rounded-t-none;
+}
+
+/* Code block styles */
+.code-highlight {
+  @apply float-left min-w-full;
+}
+
+.code-line {
+  @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
+}
+
+.code-line.inserted {
+  @apply bg-green-500 bg-opacity-20;
+}
+
+.code-line.deleted {
+  @apply bg-red-500 bg-opacity-20;
+}
+
+.highlight-line {
+  @apply -mx-4 border-l-4 border-teal-500  bg-gray-700 bg-opacity-50;
+}
+
+.line-number::before {
+  @apply mr-4 -ml-2 inline-block w-4 text-right text-zinc-400;
+  content: attr(line);
+}
