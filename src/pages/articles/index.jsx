@@ -35,6 +35,9 @@ function Article({ article }) {
 }
 
 export default function ArticlesIndex({ articles }) {
+  const headline = 'I write about things I’m learning and things I’m building.'
+  const intro="All of my long-form thoughts on programming, leadership, infrastructure, and more, collected in chronological order."
+
   return (
     <>
     <NextSeo
@@ -45,7 +48,7 @@ export default function ArticlesIndex({ articles }) {
         url: 'https://brian.dev/articles',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=Articles&desc=Writing on software design, company building, and the aerospace industry.`,
+            url: `https://og.brian.dev/api/og?title=Articles&desc=${headline}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
@@ -56,8 +59,8 @@ export default function ArticlesIndex({ articles }) {
       }}
     />
       <SimpleLayout
-        title="Writing on software design, company building, and the aerospace industry."
-        intro="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+        title={headline}
+        intro={intro}
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">

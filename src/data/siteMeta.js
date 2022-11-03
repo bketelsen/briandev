@@ -1,13 +1,12 @@
 
-import logoAmazon from '@/images/logos/aws.jpg'
+import logoAmazon from '@/images/logos/aws.svg'
 import logoClarity from '@/images/logos/clarity.jpg'
-import logoMicrosoft from '@/images/logos/microsoft.jpg'
+import logoMicrosoft from '@/images/logos/azure.svg'
 import logoXOR from '@/images/logos/xor.jpg'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'  
+import logoGolang from '@/images/logos/icons8-golang.svg'
+import logoKubernetes from '@/images/logos/kubernetes.svg'
+import logoCaptainhook from '@/images/logos/captainhook.svg'  
 const siteMeta = {
     title: "Brian Ketelsen",
     description: "Brian Ketelsen is a developer advocate, keynote speaker, author, and open source practitioner.",
@@ -62,37 +61,25 @@ export const projects = [
     name: 'Captain Hook',
     description:
       'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+    link: { href: 'https://github.com/bketelsen/captainhook', label: 'github.com' },
+    logo: logoCaptainhook,
   },
   {
-    name: 'Animaginary',
+    name: 'Kubernetes',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Production-Grade Container Scheduling and Management',
+    link: { href: 'https://github.com/kubernetes/kubernetes', label: 'github.com' },
+    logo: logoKubernetes,
   },
   {
-    name: 'HelioStream',
+    name: 'Go',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'Build fast, reliable, and efficient software at scale',
+    link: { href: 'https://go.dev', label: 'go.dev' },
+    logo: logoGolang,
   },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
-  },
+
+
 ]
 
 

@@ -17,6 +17,9 @@ function LinkIcon(props) {
 }
 
 export default function Projects() {
+  const headline = "Things I’ve made trying to put my mark on the universe."
+  const intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+
   return (
     <>
     <NextSeo
@@ -27,7 +30,7 @@ export default function Projects() {
         url: 'https://brian.dev/projects',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=Projects&desc=Things I’ve made trying to put my mark on the universe.`,
+            url: `https://og.brian.dev/api/og?title=Projects&desc=${headline}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
@@ -38,8 +41,8 @@ export default function Projects() {
       }}
     />
       <SimpleLayout
-        title="Things I’ve made trying to put my mark on the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title={headline}
+        intro={intro}
       >
         <ul
           role="list"
