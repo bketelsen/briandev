@@ -29,7 +29,6 @@ export function ArticleLayout({
   if (isRssFeed) {
     return children
   }
-  console.log(router)
   return (
     <>
     <NextSeo
