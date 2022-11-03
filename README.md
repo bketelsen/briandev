@@ -1,3 +1,6 @@
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+
 # Spotlight
 
 Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
@@ -27,6 +30,18 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 ## Customizing
 
 You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+
+## Code Blocks
+extension:filename {highlightLines} showLineNumbers
+```go:document.go {1,3-4} showLineNumbers
+type Document struct {
+	Hash         string
+	Path         string
+	PreviousPath string
+	Operation    *CognitiveOperation
+	Results      *CognitiveReadResponse
+}
+```
 
 ## License
 
