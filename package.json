@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "commit": "commit"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -34,9 +35,18 @@
     "unist-util-visit": "^4.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@commitlint/prompt-cli": "^17.2.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.5",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.11"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
