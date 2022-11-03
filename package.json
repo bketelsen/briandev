@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "commit": "git cz"
+    "cz": "git cz"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
