@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/brian-head.jpg'
-import  siteMeta from '@/data/siteMeta'
+import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo';
 
 
@@ -42,24 +42,24 @@ function MailIcon(props) {
 export default function About() {
   return (
     <>
-    <NextSeo
-      title="About - Brian Ketelsen"
-      description={siteMeta.description}
-      canonical="https://brian.dev/about"
-      openGraph={{
-        url: 'https://brian.dev/about',
-        images: [
-          {
-            url: `https://og.brian.dev/api/og?title=About&desc=${siteMeta.description}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'brian.dev',
-      }}
-    />
+      <NextSeo
+        title="About - Brian Ketelsen"
+        description={siteMeta.description}
+        canonical="https://brian.dev/about"
+        openGraph={{
+          url: 'https://brian.dev/about',
+          images: [
+            {
+              url: `https://og.brian.dev/api/og?title=About&desc=${siteMeta.description}`,
+              width: 1200,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            }
+          ],
+          siteName: 'brian.dev',
+        }}
+      />
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
@@ -74,35 +74,36 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Brian Ketelsen. I live in New York City, where I design the
-              future.
+              I’m Brian Ketelsen. I live in Florida, where I help people
+              across the world learn the Cloud.
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 space-y-7 prose dark:prose-invert text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                Howdy! Thanks for stopping by. I'm Brian, and I've been doing technology
+                things since <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">acoustic
+                  modem couplers</a> were a thing. I love Open Source and exploring different programming languages.
+                Some highlights about me and my activities:
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
+                <b>Army Veteran:</b> Bradley Fighting Vehicle Gunner, Infantry, 1st Armored Division
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
+                <b>Father of four</b> with 19 years difference between oldest and youngest child
               </p>
               <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                <b>Co-founded GopherCon</b> <a href="https://gophercon.com">the largest conference for Go developers</a>.
+              </p>
+              <p>
+                <b>Co-authored</b> <a href="https://www.amazon.com/Go-Action-William-Kennedy/dp/1617291781">Go In Action</a> for Manning Publishing.
+              </p>
+              <p>
+                <b>Co-wrote</b> Skynet and SkyDNS with Erik St. Martin, which was eventually morphed into the DNS service discovery that powers Kubernetes.
+              </p>
+              <p>
+                <b>Contributed</b> to the largest projects that power the Internet. Go, Kubernetes, Etcd, and so many more.
+              </p>
+              <p>
+                I love Open Source, learning in public, and sharing what I learn with others.
               </p>
             </div>
           </div>
