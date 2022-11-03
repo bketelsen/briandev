@@ -227,7 +227,7 @@ export default function Home({ articles }) {
         images: [
           {
             url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
-            width: 800,
+            width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
