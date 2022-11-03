@@ -1,5 +1,5 @@
-import Head from 'next/head'
-
+import { NextSeo } from 'next-seo';
+import  siteMeta from '@/data/siteMeta'
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
@@ -28,13 +28,24 @@ function Tool({ title, href, children }) {
 export default function Uses() {
   return (
     <>
-      <Head>
-        <title>Uses - Brian Ketelsen</title>
-        <meta
-          name="description"
-          content="Software I use, gadgets I love, and other things I recommend."
-        />
-      </Head>
+    <NextSeo
+      title="Uses - Brian Ketelsen"
+      description={siteMeta.description}
+      canonical="https://brian.dev/uses"
+      openGraph={{
+        url: 'https://brian.dev/uses',
+        images: [
+          {
+            url: `https://og.brian.dev/api/og?title=Uses&desc=Things I use every day to get my work done.`,
+            width: 1200,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          }
+        ],
+        siteName: 'brian.dev',
+      }}
+    />
       <SimpleLayout
         title="Software I use, gadgets I love, and other things I recommend."
         intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."

@@ -1,5 +1,4 @@
-import Head from 'next/head'
-
+import { NextSeo } from 'next-seo';
 import { Card } from '@/components/Card'
 import { Bookmark } from '@/components/Bookmark'
 import { getAllLiam } from '@/lib/getAllLiam'
@@ -39,15 +38,27 @@ function Article({ article }) {
 }
 
 export default function ArticlesIndex({ articles }) {
+    const headline = 'Updates on Liam’s journey with Muenke Syndrome'
     return (
         <>
-            <Head>
-                <title>{`${siteMeta.title} - Liam`}</title>
-                <meta
-                    name="description"
-                    content="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
-                />
-            </Head>
+    <NextSeo
+      title="Articles - Brian Ketelsen"
+      description={siteMeta.description}
+      canonical="https://brian.dev/liam"
+      openGraph={{
+        url: 'https://brian.dev/liam',
+        images: [
+          {
+            url: `https://og.brian.dev/api/og?title=Liam&desc=${headline}`,
+            width: 1200,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          }
+        ],
+        siteName: 'brian.dev',
+      }}
+    />
             <Container className="mt-16 sm:mt-32">
                 <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
                     <div className="lg:pl-20">
