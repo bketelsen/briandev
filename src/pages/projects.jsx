@@ -1,5 +1,5 @@
 import Image from 'next/future/image'
-import Head from 'next/head'
+import { NextSeo } from 'next-seo';
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
@@ -19,15 +19,26 @@ function LinkIcon(props) {
 export default function Projects() {
   return (
     <>
-      <Head>
-        <title>{`${siteMeta.title} - Home`}</title>
-        <meta
-          name="description"
-          content="Things I’ve made trying to put my dent in the universe."
-        />
-      </Head>
+    <NextSeo
+      title="Projects - Brian Ketelsen"
+      description={siteMeta.description}
+      canonical="https://brian.dev/projects"
+      openGraph={{
+        url: 'https://brian.dev/projects',
+        images: [
+          {
+            url: `https://og.brian.dev/api/og?title=Projects&desc=Things I’ve made trying to put my mark on the universe.`,
+            width: 1200,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          }
+        ],
+        siteName: 'brian.dev',
+      }}
+    />
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
+        title="Things I’ve made trying to put my mark on the universe."
         intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
       >
         <ul

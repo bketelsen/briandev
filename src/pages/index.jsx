@@ -1,5 +1,4 @@
 import Image from 'next/future/image'
-import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
 
@@ -25,6 +24,8 @@ import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 import  siteMeta, {resume} from '@/data/siteMeta'
+import { NextSeo } from 'next-seo';
+
 
 function MailIcon(props) {
   return (
@@ -217,15 +218,24 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
-      <Head>
-        <title>
-          {`${siteMeta.title} - Home`}
-        </title>
-        <meta
-          name="description"
-          content={siteMeta.description}
-        />
-      </Head>
+    <NextSeo
+      title="Brian Ketelsen"
+      description={siteMeta.description}
+      canonical="https://brian.dev/"
+      openGraph={{
+        url: 'https://brian.dev',
+        images: [
+          {
+            url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          }
+        ],
+        siteName: 'brian.dev',
+      }}
+    />
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">

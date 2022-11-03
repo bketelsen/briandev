@@ -1,5 +1,4 @@
 import Image from 'next/future/image'
-import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
 
@@ -12,6 +11,7 @@ import {
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/brian-head.jpg'
 import  siteMeta from '@/data/siteMeta'
+import { NextSeo } from 'next-seo';
 
 
 function SocialLink({ className, href, children, icon: Icon }) {
@@ -42,15 +42,24 @@ function MailIcon(props) {
 export default function About() {
   return (
     <>
-      <Head>
-        <title>
-          {`${siteMeta.title} - Home`}
-        </title>
-        <meta
-          name="description"
-          content={siteMeta.description}
-        />
-      </Head>
+    <NextSeo
+      title="About - Brian Ketelsen"
+      description={siteMeta.description}
+      canonical="https://brian.dev/about"
+      openGraph={{
+        url: 'https://brian.dev/about',
+        images: [
+          {
+            url: `https://og.brian.dev/api/og?title=About&desc=${siteMeta.description}`,
+            width: 1200,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          }
+        ],
+        siteName: 'brian.dev',
+      }}
+    />
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">

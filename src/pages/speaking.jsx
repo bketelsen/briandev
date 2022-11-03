@@ -1,8 +1,8 @@
-import Head from 'next/head'
-
+import { NextSeo } from 'next-seo';
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import  siteMeta from '@/data/siteMeta'
 
 function SpeakingSection({ children, ...props }) {
   return (
@@ -28,13 +28,24 @@ function Appearance({ title, description, event, cta, href }) {
 export default function Speaking() {
   return (
     <>
-      <Head>
-        <title>Speaking - Brian Ketelsen</title>
-        <meta
-          name="description"
-          content="I’ve spoken at events all around the world and been interviewed for many podcasts."
-        />
-      </Head>
+    <NextSeo
+      title="Projects - Brian Ketelsen"
+      description={siteMeta.description}
+      canonical="https://brian.dev/speaking"
+      openGraph={{
+        url: 'https://brian.dev/speaking',
+        images: [
+          {
+            url: `https://og.brian.dev/api/og?title=Speaking&desc=I’ve spoken at events all around the world and been interviewed for many podcasts.`,
+            width: 1200,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          }
+        ],
+        siteName: 'brian.dev',
+      }}
+    />
       <SimpleLayout
         title="I’ve spoken at events all around the world and been interviewed for many podcasts."
         intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
