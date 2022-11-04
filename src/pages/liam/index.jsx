@@ -75,10 +75,10 @@ export default function ArticlesIndex({ articles }) {
                         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                             Liam’s Journey - Living with Muenke Syndrome
                         </h1>
-                        <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+                        <div className="mt-6 space-y-7 text-lg text-zinc-600 dark:text-zinc-400">
                             <div className="lg:order-first lg:row-span-2">
 
-                                <div className="mt-6 space-y-7 text-base prose dark:prose-invert text-zinc-600 dark:text-zinc-400">
+                                <div className="mt-6 space-y-7 text-lg prose dark:prose-invert text-zinc-600 dark:text-zinc-400">
                                     <p>
                                     Liam was born on May 14, 2021. After an ultrasound, x-ray and CT scan, Liam was diagnosed with <a href="https://www.mayoclinic.org/diseases-conditions/craniosynostosis/symptoms-causes/syc-20354513">bicoronal craniosynostosis</a> at one month old. We didn’t know his craniosynostosis was caused by <a href="https://www.seattlechildrens.org/conditions/muenke-syndrome/">Muenke Syndrome</a> until Liam was six months old. 
                                      Muenke Syndrome is characterized by craniosynostosis (the premature fusion of one or more skull sutures), hearing loss and developmental delays. 

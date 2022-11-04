@@ -5,7 +5,7 @@ export function Prose({ as: Component = 'div', className, ...props }) {
     <Component
       className={clsx(
         className,
-        'pt-6 prose prose-lg max-w-none dark:prose-invert ',
+        'pt-6 prose prose-lg text-xl max-w-none dark:prose-invert ',
         // headings
         // lead
         // links
