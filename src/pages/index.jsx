@@ -10,6 +10,7 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
+  MastadonIcon
 } from '@/components/SocialIcons'
 
 
@@ -257,6 +258,13 @@ export default function Home({ articles }) {
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
             />
+            <SocialLink
+              href={siteMeta.author.mastadon}
+              aria-label="Follow on Mastadon"
+              icon={MastadonIcon}
+              rel="me"
+            />
+
             <SocialLink
               href={siteMeta.author.instagram}
               aria-label="Follow on Instagram"
