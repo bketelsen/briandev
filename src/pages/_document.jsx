@@ -55,6 +55,8 @@ export default function Document() {
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
         <Main />
         <NextScript />
+        <div style={{display: 'none'}}>        <a rel="me" href="https://tty0.social/@bketelsen">Mastodon</a>
+</div>
       </body>
     </Html>
   )
