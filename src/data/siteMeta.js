@@ -15,7 +15,7 @@ const siteMeta = {
         name: "Brian Ketelsen",
         email: "me@brian.dev",
         twitter: "https://twitter.com/bketelsen",
-        mastadon: "https://tty0.social/@bketelsen",
+        mastodon: "https://tty0.social/@bketelsen",
         instagram: "https://instagram.com/bketelsen",
         github: "https://github.com.com/bketelsen",
         linkedin: "https://linkedin.com/in/brianketelsen",

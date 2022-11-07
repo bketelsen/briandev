@@ -8,7 +8,7 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastadonIcon
+  MastodonIcon
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/brian-head.jpg'
 import siteMeta from '@/data/siteMeta'
@@ -113,8 +113,8 @@ export default function About() {
               <SocialLink href={siteMeta.author.twitter} icon={TwitterIcon}>
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href={siteMeta.author.mastadon} icon={MastadonIcon} className="mt-4">
-                Follow on Mastadon
+              <SocialLink href={siteMeta.author.mastodon} icon={MastodonIcon} className="mt-4">
+                Follow on Mastodon
               </SocialLink>
               <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
