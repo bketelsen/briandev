@@ -80,7 +80,7 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 prose dark:prose-invert text-lg text-zinc-600 dark:text-zinc-400">
               <p>
-                Howdy! Thanks for stopping by. I’m Brian, and I’ve been doing technology
+                Howdy! Thanks for stopping by. I’m Brian and I’ve been doing technology
                 things since <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">acoustic
                   modem couplers</a> were a thing. I love Open Source and exploring different programming languages.
                 Some highlights about me and my activities:
