@@ -20,9 +20,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="flex text-sm font-medium transition group text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="flex-none w-6 h-6 transition fill-zinc-500 group-hover:fill-teal-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -69,7 +69,7 @@ export default function About() {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                className="object-cover aspect-square rotate-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800"
               />
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function About() {
               I’m Brian Ketelsen. I live in Florida, where I help people
               across the world learn the Cloud.
             </h1>
-            <div className="mt-6 space-y-7 prose dark:prose-invert text-lg text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 text-lg prose space-y-7 dark:prose-invert text-zinc-600 dark:text-zinc-400">
               <p>
                 Howdy! Thanks for stopping by. I’m Brian and I’ve been doing technology
                 things since <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">acoustic
@@ -89,7 +89,7 @@ export default function About() {
                 <b>Army Veteran:</b> Bradley Fighting Vehicle Gunner, Infantry, 1st Armored Division
               </p>
               <p>
-                <b>Father of four</b> with 19 years difference between oldest and youngest child
+                <b>Father of <s>four</s> five</b> with <s>19</s> 21 years difference between oldest and youngest child
               </p>
               <p>
                 <b>Co-founded GopherCon</b> <a href="https://gophercon.com">the largest conference for Go developers</a>.
@@ -128,7 +128,7 @@ export default function About() {
               <SocialLink
                 href={`mailto:${siteMeta.author.email}`}
                 icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+                className="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-700/40"
               >
                 {siteMeta.author.email}
               </SocialLink>
