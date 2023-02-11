@@ -3,7 +3,7 @@ import logoAmazon from '@/images/logos/aws.svg'
 import logoClarity from '@/images/logos/clarity.jpg'
 import logoMicrosoft from '@/images/logos/azure.svg'
 import logoXOR from '@/images/logos/xor.jpg'
-import logoCosmos from '@/images/logos/cosmos.svg'
+import logoVanilla from '@/images/logos/vanilla.svg'
 import logoGolang from '@/images/logos/icons8-golang.svg'
 import logoKubernetes from '@/images/logos/kubernetes.svg'
 import logoCaptainhook from '@/images/logos/captainhook.svg'  
@@ -58,6 +58,13 @@ const siteMeta = {
     },
   ]
 export const projects = [
+  {
+    name: 'Vanilla OS',
+    description:
+      'Vanilla OS is an immutable and atomic Ubuntu Linux-based Point Release distribution, that receives updates at the right time, neither before nor after, without sacrificing security and functionality.',
+    link: { href: 'https://vanillaos.org', label: 'vanillaos.org' },
+    logo: logoVanilla,
+  },
   {
     name: 'Captain Hook',
     description:
