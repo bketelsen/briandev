@@ -118,7 +118,7 @@ export default function ArticlesIndex({ articles }) {
 export async function getStaticProps() {
     return {
         props: {
-            articles: (await getAllLiam()).map(({ component, ...meta }) => meta),
+            articles: (await (await getAllLiam()).reverse()).map(({ component, ...meta }) => meta),
         },
     }
 }
