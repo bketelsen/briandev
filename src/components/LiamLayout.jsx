@@ -41,7 +41,7 @@ export function LiamLayout({
         url: `https://brian.dev${router.pathname}`,
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=${meta.title}&desc=${meta.description}`,
+            url: `https://og.brian.dev/api/og?title=${meta.title}&desc=${meta.description}&imgUrl=https://brian.dev/fixed/images/IMG_7808.png`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
