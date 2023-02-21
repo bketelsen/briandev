@@ -49,7 +49,7 @@ export default function ArticlesIndex({ articles }) {
         url: 'https://brian.dev/liam',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=Liam&desc=${headline}`,
+            url: `https://og.brian.dev/api/og?title=Liam&desc=${headline}&imgUrl=https://brian.dev/fixed/images/IMG_7808.png`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
