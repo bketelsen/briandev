@@ -53,7 +53,7 @@ export default function Uses() {
         <div className="space-y-20">
           <ToolsSection title="Workstation">
             <Tool title="13” MacBook Pro, M1 Max, 64GB RAM (2021)">
-              I don't know how Apple makes such a tiny laptop so fast and responsive, no matter what load I put on it.
+              I don&apos;t know how Apple makes such a tiny laptop so fast and responsive, no matter what load I put on it.
             </Tool>
             <Tool title="Dell XPS 8950">
               12th Generation i7 with oodles of memory and 4TB of NVMe drives running Bluefin Linux.
