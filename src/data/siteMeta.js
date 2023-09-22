@@ -19,7 +19,7 @@ const siteMeta = {
         twitter: "https://twitter.com/bketelsen",
         mastodon: "https://tty0.social/@bketelsen",
         instagram: "https://instagram.com/bketelsen",
-        github: "https://github.com.com/bketelsen",
+        github: "https://github.com/bketelsen",
         linkedin: "https://linkedin.com/in/brianketelsen",
         twitch: "https://twitch.tv/bketelsen",
         youtube: "https://youtube.com/@bketelsen",
