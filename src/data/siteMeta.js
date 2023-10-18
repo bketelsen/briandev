@@ -5,6 +5,7 @@ import logoMicrosoft from '@/images/logos/azure.svg'
 import logoXOR from '@/images/logos/xor.jpg'
 import logoVanilla from '@/images/logos/vanilla.svg'
 import logoFleek from '@/images/logos/fleeksvg.svg'
+import logoUblue from '@/images/logos/ublue.png'
 
 import logoGolang from '@/images/logos/icons8-golang.svg'
 import logoKubernetes from '@/images/logos/kubernetes.svg'
@@ -66,6 +67,13 @@ export const projects = [
       'Install and manage all the tools you need to be productive.',
     link: { href: 'https://getfleek.dev', label: 'getfleek.dev' },
     logo: logoFleek,
+  },
+  {
+    name: 'Universal Blue',
+    description:
+      'Custom Operating System images based on Fedora.',
+    link: { href: 'https://ublue.it', label: 'Universal Blue' },
+    logo: logoUblue,
   },
   {
     name: 'Vanilla OS',
