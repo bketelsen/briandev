@@ -85,7 +85,7 @@ export const projects = [
   {
     name: 'Captain Hook',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
+      'Custom commands as webhooks.',
     link: { href: 'https://github.com/bketelsen/captainhook', label: 'github.com' },
     logo: logoCaptainhook,
   },
