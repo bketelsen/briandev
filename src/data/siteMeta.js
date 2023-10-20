@@ -76,6 +76,13 @@ export const projects = [
     logo: logoUblue,
   },
   {
+    name: 'Bluefin',
+    description:
+      'The next generation Linux workstation. Built for cloud-native, using cloud-native.',
+    link: { href: 'https://projectbluefin.io', label: 'Bluefin' },
+    logo: logoUblue,
+  },
+  {
     name: 'Vanilla OS',
     description:
       'Vanilla OS is an immutable and atomic Ubuntu Linux-based Point Release distribution, that receives updates at the right time, neither before nor after, without sacrificing security and functionality.',
