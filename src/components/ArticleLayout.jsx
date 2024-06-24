@@ -34,19 +34,19 @@ export function ArticleLayout({
     <NextSeo
       title={meta.title}
       description={meta.description}
-      canonical={`https://brian.dev${router.pathname}`}
+      canonical={`https://aubreyzulu.com${router.pathname}`}
       openGraph={{
-        url: `https://brian.dev${router.pathname}`,
+        url: `https://aubreyzulu.com${router.pathname}`,
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=${meta.title}&desc=${meta.description}`,
+            url: `https://og.aubreyzulu.com/api/og?title=${meta.title}&desc=${meta.description}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'aubreyzulu.com',
       }}
     />
       <Container className="mt-16 lg:mt-32">

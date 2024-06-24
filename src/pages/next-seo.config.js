@@ -2,8 +2,8 @@ export default {
     openGraph: {
       type: 'website',
       locale: 'en_IE',
-      url: 'https://www.brian.dev/',
-      siteName: 'Brian Ketelsen',
+      url: 'https://www.aubreyzulu.com/',
+      siteName: 'Aubrey Zulu',
     },
     twitter: {
       handle: '@bketelsen',

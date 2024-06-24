@@ -220,21 +220,21 @@ export default function Home({ articles }) {
   return (
     <>
     <NextSeo
-      title="Brian Ketelsen"
+      title="Aubrey Zulu"
       description={siteMeta.description}
-      canonical="https://brian.dev/"
+      canonical="https://aubreyzulu.com/"
       openGraph={{
-        url: 'https://brian.dev',
+        url: 'https://aubreyzulu.com',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+            url: `https://og.aubreyzulu.com/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'aubreyzulu.com',
       }}
     />
       <Container className="mt-9">

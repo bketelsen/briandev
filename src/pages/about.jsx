@@ -44,21 +44,21 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About - Brian Ketelsen"
+        title="About - Aubrey Zulu"
         description={siteMeta.description}
-        canonical="https://brian.dev/about"
+        canonical="https://aubreyzulu.com/about"
         openGraph={{
-          url: 'https://brian.dev/about',
+          url: 'https://aubreyzulu.com/about',
           images: [
             {
-              url: `https://og.brian.dev/api/og?title=About&desc=${siteMeta.description}`,
+              url: `https://og.aubreyzulu.com/api/og?title=About&desc=${siteMeta.description}`,
               width: 1200,
               height: 600,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
             }
           ],
-          siteName: 'brian.dev',
+          siteName: 'aubreyzulu.com',
         }}
       />
       <Container className="mt-16 sm:mt-32">
@@ -75,7 +75,7 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Brian Ketelsen. I live in Florida, where I help people
+              I’m Aubrey Zulu. I live in Florida, where I help people
               across the world learn the Cloud.
             </h1>
             <div className="mt-6 text-lg prose space-y-7 dark:prose-invert text-zinc-600 dark:text-zinc-400">

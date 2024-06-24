@@ -2,7 +2,7 @@ import { ArticleLayout } from '@/components/ArticleLayout'
 import {Callout} from '@/components/Callout'
 
 export const meta = {
-  author: 'Brian Ketelsen',
+  author: 'Aubrey Zulu',
   date: '2022-07-12',
   title: 'Forecast: Cloudy',
   description:
@@ -61,7 +61,7 @@ Coder has your back if you don't want to expose your controller over the Interne
 
 #### Installing Caddy
 
-I used Ubuntu server, so I installed using Caddy's [apt repository](https://caddyserver.com/docs/install#debian-ubuntu-raspbian). It installs the binary, creates a system service and starts the server. Now's a good time to go to your domain registrar and add a domain or subdomain to use for your controller. I picked the creative and unique domain `code.brian.dev` because I like to be original. I created a DNS A record that points to the public IP address of my EC2 instance. We can continue with the installation while DNS records propagate across the internets.
+I used Ubuntu server, so I installed using Caddy's [apt repository](https://caddyserver.com/docs/install#debian-ubuntu-raspbian). It installs the binary, creates a system service and starts the server. Now's a good time to go to your domain registrar and add a domain or subdomain to use for your controller. I picked the creative and unique domain `code.aubreyzulu.com` because I like to be original. I created a DNS A record that points to the public IP address of my EC2 instance. We can continue with the installation while DNS records propagate across the internets.
 
 #### Installing Coder
 
@@ -69,7 +69,7 @@ Follow the [installation guide](https://coder.com/docs/coder-oss/latest/install)
 
 ```bash {2, 9} showLineNumbers
 # Run "coder server --help" for flag information.
-CODER_ACCESS_URL=https://code.brian.dev
+CODER_ACCESS_URL=https://code.aubreyzulu.com
 CODER_ADDRESS=
 CODER_PG_CONNECTION_URL=
 CODER_TLS_CERT_FILE=

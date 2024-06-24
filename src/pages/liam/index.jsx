@@ -42,21 +42,21 @@ export default function ArticlesIndex({ articles }) {
     return (
         <>
     <NextSeo
-      title="Articles - Brian Ketelsen"
+      title="Articles - Aubrey Zulu"
       description={siteMeta.description}
-      canonical="https://brian.dev/liam"
+      canonical="https://aubreyzulu.com/liam"
       openGraph={{
-        url: 'https://brian.dev/liam',
+        url: 'https://aubreyzulu.com/liam',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=Liam&desc=${headline}&imgUrl=https://brian.dev/fixed/images/IMG_7808.png`,
+            url: `https://og.aubreyzulu.com/api/og?title=Liam&desc=${headline}&imgUrl=https://aubreyzulu.com/fixed/images/IMG_7808.png`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'aubreyzulu.com',
       }}
     />
             <Container className="mt-16 sm:mt-32">

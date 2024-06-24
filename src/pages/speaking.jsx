@@ -29,21 +29,21 @@ export default function Speaking() {
   return (
     <>
     <NextSeo
-      title="Speaking - Brian Ketelsen"
+      title="Speaking - Aubrey Zulu"
       description={siteMeta.description}
-      canonical="https://brian.dev/speaking"
+      canonical="https://aubreyzulu.com/speaking"
       openGraph={{
-        url: 'https://brian.dev/speaking',
+        url: 'https://aubreyzulu.com/speaking',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=Speaking&desc=I’ve spoken at events all around the world and been interviewed for many podcasts.`,
+            url: `https://og.aubreyzulu.com/api/og?title=Speaking&desc=I’ve spoken at events all around the world and been interviewed for many podcasts.`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'aubreyzulu.com',
       }}
     />
       <SimpleLayout
@@ -73,7 +73,7 @@ export default function Speaking() {
               href="https://popcast-d9f7b6dc.simplecast.com/episodes/episode-76-go-roadhouse-with-microsofts-brian-ketelsen"
               title="
 
-              Episode 76 - GO Roadhouse with Microsoft's Brian Ketelsen"
+              Episode 76 - GO Roadhouse with Microsoft's Aubrey Zulu"
               description="Go, Guitars, Roadhouse, and so much more with Dan Papandrea."
               event="The POPCAST, July 7, 2021"
               cta="Listen to podcast"

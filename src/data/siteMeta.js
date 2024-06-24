@@ -11,12 +11,12 @@ import logoGolang from '@/images/logos/icons8-golang.svg'
 import logoKubernetes from '@/images/logos/kubernetes.svg'
 import logoCaptainhook from '@/images/logos/captainhook.svg'  
 const siteMeta = {
-    title: "Brian Ketelsen",
-    description: "Brian Ketelsen is a developer advocate, keynote speaker, author, and open source practitioner.",
-    copyright: "Brian Ketelsen, CC-BY-SA",
+    title: "Aubrey Zulu",
+    description: "Aubrey Zulu is a developer advocate, keynote speaker, author, and open source practitioner.",
+    copyright: "Aubrey Zulu, CC-BY-SA",
     author: {
-        name: "Brian Ketelsen",
-        email: "me@brian.dev",
+        name: "Aubrey Zulu",
+        email: "me@aubreyzulu.com",
         twitter: "https://twitter.com/bketelsen",
         mastodon: "https://tty0.social/@bketelsen",
         instagram: "https://instagram.com/bketelsen",
@@ -25,7 +25,7 @@ const siteMeta = {
         twitch: "https://twitch.tv/bketelsen",
         youtube: "https://youtube.com/@bketelsen",
     },
-    siteUrl: "https://brian.dev"
+    siteUrl: "https://aubreyzulu.com"
 }
  export const resume = [
     {
