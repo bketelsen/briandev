@@ -66,9 +66,13 @@ export const projects = [
     logo: logoFleek,
   },
   {
-    name: 'Universal Blue',
-    description: 'Custom Operating System images based on Fedora.',
-    link: { href: 'https://ublue.it', label: 'Universal Blue' },
+    name: 'Duniya Health Care',
+    description:
+      'Duniya Health Care is a platform designed to help retail pharmacies in Africa source medicines from trusted wholesalers. It offers a one-stop shop for purchasing from various wholesalers and manufacturers, ensuring free and timely delivery of orders. The service aims to prevent stock-outs and supports both urban and rural pharmacies by providing efficient and reliable logistics. Duniya Health Care is committed to enhancing primary healthcare accessibility across Africa',
+    link: {
+      href: 'https://duniyahealthcare.com/',
+      label: 'Duniya Health Care',
+    },
     logo: logoUblue,
   },
   {
