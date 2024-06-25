@@ -10,9 +10,8 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon
+  MastodonIcon,
 } from '@/components/SocialIcons'
-
 
 import image3 from '@/images/photos/1102.jpg'
 import image2 from '@/images/photos/20150716-070618871-3.jpg'
@@ -20,13 +19,11 @@ import image1 from '@/images/photos/bike.jpg'
 import image5 from '@/images/photos/band.jpg'
 import image4 from '@/images/photos/BW013.jpg'
 
-
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
-import  siteMeta, {resume} from '@/data/siteMeta'
-import { NextSeo } from 'next-seo';
-
+import siteMeta, { resume } from '@/data/siteMeta'
+import { NextSeo } from 'next-seo'
 
 function MailIcon(props) {
   return (
@@ -140,7 +137,6 @@ function Newsletter() {
 }
 
 function Resume() {
-
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -181,8 +177,12 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="https://linkedin.com/in/brianketelsen" variant="secondary" className="group mt-6 w-full">
-               More on LinkedIn 
+      <Button
+        href="https://linkedin.com/in/aubreyzulu"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
+        More on LinkedIn
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -219,50 +219,51 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
-    <NextSeo
-      title="Aubrey Zulu"
-      description={siteMeta.description}
-      canonical="https://aubreyzulu.com/"
-      openGraph={{
-        url: 'https://aubreyzulu.com',
-        images: [
-          {
-            url: `https://og.aubreyzulu.com/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'aubreyzulu.com',
-      }}
-    />
+      <NextSeo
+        title="Aubrey Zulu"
+        description={siteMeta.description}
+        canonical="https://aubreyzulu.com/"
+        openGraph={{
+          url: 'https://aubreyzulu.com',
+          images: [
+            {
+              url: `https://og.aubreyzulu.com/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+              width: 1200,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'aubreyzulu.com',
+        }}
+      />
       <Container className="mt-9">
         <div className="max-w-2xl text-lg">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Cloud Advocate, hacker, and open source enthusiast.
           </h1>
-          <p className="mt-6 prose dark:prose-invert">
-            I’m Brian, and I teach people how to use the Cloud. I’ve been active in Open Source for as long as I’ve been coding &mdash; and that’s a long time.
+          <p className="prose mt-6 dark:prose-invert">
+            I’m Brian, and I teach people how to use the Cloud. I’ve been active
+            in Open Source for as long as I’ve been coding &mdash; and that’s a
+            long time.
           </p>
-          <p className="mt-6 prose dark:prose-invert">
-            With some friends, I wrote a <a href="https://www.manning.com/books/go-in-action">book about the Go programming language</a>.
-             I’ve given many <Link href={"/speaking"} >talks</Link> about Go, Distributed Computing, and programming in general.
+          <p className="prose mt-6 dark:prose-invert">
+            With some friends, I wrote a{' '}
+            <a href="https://www.manning.com/books/go-in-action">
+              book about the Go programming language
+            </a>
+            . I’ve given many <Link href={'/speaking'}>talks</Link> about Go,
+            Distributed Computing, and programming in general.
           </p>
-          <p className="mt-6 prose dark:prose-invert">
-            Poke around and see what I’m up to. It’s all open source, so feel free to contribute.
+          <p className="prose mt-6 dark:prose-invert">
+            Poke around and see what I’m up to. It’s all open source, so feel
+            free to contribute.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
               href={siteMeta.author.twitter}
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
-            />
-            <SocialLink
-              href={siteMeta.author.mastodon}
-              aria-label="Follow on Mastodon"
-              icon={MastodonIcon}
-              rel="me"
             />
 
             <SocialLink
@@ -271,7 +272,7 @@ export default function Home({ articles }) {
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href={siteMeta.author.github}
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />

@@ -8,21 +8,20 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon
+  MastodonIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/brian-head.jpg'
 import siteMeta from '@/data/siteMeta'
-import { NextSeo } from 'next-seo';
-
+import { NextSeo } from 'next-seo'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="flex text-sm font-medium transition group text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
-        <Icon className="flex-none w-6 h-6 transition fill-zinc-500 group-hover:fill-teal-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -56,7 +55,7 @@ export default function About() {
               height: 600,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
-            }
+            },
           ],
           siteName: 'aubreyzulu.com',
         }}
@@ -69,42 +68,63 @@ export default function About() {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="object-cover aspect-square rotate-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800"
+                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Aubrey Zulu. I live in Florida, where I help people
-              across the world learn the Cloud.
+              I’m Aubrey Zulu. I live in Florida, where I help people across the
+              world learn the Cloud.
             </h1>
-            <div className="mt-6 text-lg prose space-y-7 dark:prose-invert text-zinc-600 dark:text-zinc-400">
+            <div className="prose mt-6 space-y-7 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400">
               <p>
-                Howdy! Thanks for stopping by. I’m Brian and I’ve been doing technology
-                things since <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">acoustic
-                  modem couplers</a> were a thing. I love Open Source and exploring different programming languages.
-                Some highlights about me and my activities:
+                Howdy! Thanks for stopping by. I’m Brian and I’ve been doing
+                technology things since{' '}
+                <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">
+                  acoustic modem couplers
+                </a>{' '}
+                were a thing. I love Open Source and exploring different
+                programming languages. Some highlights about me and my
+                activities:
               </p>
               <p>
-                <b>Army Veteran:</b> Bradley Fighting Vehicle Gunner, Infantry, 1st Armored Division
+                <b>Army Veteran:</b> Bradley Fighting Vehicle Gunner, Infantry,
+                1st Armored Division
               </p>
               <p>
-                <b>Father of <s>four</s> five</b> with <s>19</s> 21 years difference between oldest and youngest child
+                <b>
+                  Father of <s>four</s> five
+                </b>{' '}
+                with <s>19</s> 21 years difference between oldest and youngest
+                child
               </p>
               <p>
-                <b>Co-founded GopherCon</b> <a href="https://gophercon.com">the largest conference for Go developers</a>.
+                <b>Co-founded GopherCon</b>{' '}
+                <a href="https://gophercon.com">
+                  the largest conference for Go developers
+                </a>
+                .
               </p>
               <p>
-                <b>Co-authored</b> <a href="https://www.amazon.com/Go-Action-William-Kennedy/dp/1617291781">Go In Action</a> for Manning Publishing.
+                <b>Co-authored</b>{' '}
+                <a href="https://www.amazon.com/Go-Action-William-Kennedy/dp/1617291781">
+                  Go In Action
+                </a>{' '}
+                for Manning Publishing.
               </p>
               <p>
-                <b>Co-wrote</b> Skynet and SkyDNS with Erik St. Martin, which was eventually morphed into the DNS service discovery that powers Kubernetes.
+                <b>Co-wrote</b> Skynet and SkyDNS with Erik St. Martin, which
+                was eventually morphed into the DNS service discovery that
+                powers Kubernetes.
               </p>
               <p>
-                <b>Contributed</b> to the largest projects that power the Internet. Go, Kubernetes, Etcd, and so many more.
+                <b>Contributed</b> to the largest projects that power the
+                Internet. Go, Kubernetes, Etcd, and so many more.
               </p>
               <p>
-                I love Open Source, learning in public, and sharing what I learn with others.
+                I love Open Source, learning in public, and sharing what I learn
+                with others.
               </p>
             </div>
           </div>
@@ -113,22 +133,34 @@ export default function About() {
               <SocialLink href={siteMeta.author.twitter} icon={TwitterIcon}>
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href={siteMeta.author.mastodon} icon={MastodonIcon} className="mt-4">
+              {/* <SocialLink href={siteMeta.author.mastodon} icon={MastodonIcon} className="mt-4">
                 Follow on Mastodon
-              </SocialLink>
-              <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} className="mt-4">
+              </SocialLink> */}
+              <SocialLink
+                href={siteMeta.author.instagram}
+                icon={InstagramIcon}
+                className="mt-4"
+              >
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href={siteMeta.author.github} icon={GitHubIcon} className="mt-4">
+              <SocialLink
+                href={siteMeta.author.github}
+                icon={GitHubIcon}
+                className="mt-4"
+              >
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href={siteMeta.author.linkedin} icon={LinkedInIcon} className="mt-4">
+              <SocialLink
+                href={siteMeta.author.linkedin}
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
                 href={`mailto:${siteMeta.author.email}`}
                 icon={MailIcon}
-                className="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-700/40"
+                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >
                 {siteMeta.author.email}
               </SocialLink>
