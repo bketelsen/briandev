@@ -1,5 +1,5 @@
 import Image from 'next/future/image'
-import { NextSeo } from 'next-seo';
+import { NextSeo } from 'next-seo'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
@@ -17,33 +17,31 @@ function LinkIcon(props) {
 }
 
 export default function Projects() {
-  const headline = "Things I’ve made trying to put my mark on the universe."
-  const intro="I’ve worked on tons of little projects over the years, but these are some of the ones that I’m most proud of. If you see something that piques your interest, check it out via the link below. While you're there, feel free to contribute any ideas that would make it better. Remember: Open source!"
+  const headline = 'Things I’ve made trying to put my mark on the universe.'
+  const intro =
+    "These are some of the smaller projects I've worked on over the years that I'm most proud of. If any of them catch your interest, you can check them out via the link below. Feel free to contribute any ideas to improve them."
 
   return (
     <>
-    <NextSeo
-      title="Projects - Aubrey Zulu"
-      description={siteMeta.description}
-      canonical="https://aubreyzulu.com/projects"
-      openGraph={{
-        url: 'https://aubreyzulu.com/projects',
-        images: [
-          {
-            url: `https://og.aubreyzulu.com/api/og?title=Projects&desc=${headline}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'aubreyzulu.com',
-      }}
-    />
-      <SimpleLayout
-        title={headline}
-        intro={intro}
-      >
+      <NextSeo
+        title="Projects - Aubrey Zulu"
+        description={siteMeta.description}
+        canonical="https://aubreyzulu.com/projects"
+        openGraph={{
+          url: 'https://aubreyzulu.com/projects',
+          images: [
+            {
+              url: `https://og.aubreyzulu.com/api/og?title=Projects&desc=${headline}`,
+              width: 1200,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'aubreyzulu.com',
+        }}
+      />
+      <SimpleLayout title={headline} intro={intro}>
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
