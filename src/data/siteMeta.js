@@ -1,10 +1,15 @@
 import logoAmazon from '@/images/logos/aws.svg'
+import BongoHive from '@/images/logos/BongoHive.svg'
+import Duniya from '@/images/logos/Duniya.svg'
+import Lassod from '@/images/logos/Lassod.svg'
+import Oyoyo from '@/images/logos/OYOYO.svg'
 import logoClarity from '@/images/logos/clarity.jpg'
 import logoMicrosoft from '@/images/logos/azure.svg'
 import logoXOR from '@/images/logos/xor.jpg'
 import logoVanilla from '@/images/logos/vanilla.svg'
 import logoFleek from '@/images/logos/fleeksvg.svg'
 import logoUblue from '@/images/logos/ublue.png'
+import Lumenalta from '@/images/logos/Lumenalta.svg'
 
 import logoGolang from '@/images/logos/icons8-golang.svg'
 import logoKubernetes from '@/images/logos/kubernetes.svg'
@@ -28,8 +33,8 @@ export const resume = [
   {
     company: 'BongoHive',
     title: 'Technical Lead Developer',
-    logo: logoAmazon,
-    start: '2022',
+    logo: BongoHive,
+    start: '2023',
     end: {
       label: 'Present',
       dateTime: new Date().getFullYear(),
@@ -38,23 +43,23 @@ export const resume = [
   {
     company: 'Lassod',
     title: 'Backend Software Engineer',
-    logo: logoMicrosoft,
-    start: '2017',
-    end: '2022',
+    logo: Lassod,
+    start: '2022',
+    end: '2024',
   },
   {
     company: 'Lumenalta (formerly Clevertech)',
     title: 'Front End Developer',
-    logo: logoXOR,
-    start: '2014',
-    end: '2016',
+    logo: Lumenalta,
+    start: '2024',
+    end: '2024',
   },
   {
     company: 'BongoHive',
     title: 'Software Developer',
-    logo: logoClarity,
-    start: '2008',
-    end: '2014',
+    logo: BongoHive,
+    start: '2020',
+    end: '2023',
   },
 ]
 export const projects = [
@@ -63,7 +68,7 @@ export const projects = [
     description:
       'Oyoyo Events is an AI-powered event management platform designed to simplify and enhance the event planning experience. It connects event planners, vendors, and attendees, offering tools to optimize event layouts, streamline coordination, and facilitate secure transactions. The platform helps attendees discover and register for events, while vendors can showcase their services and manage their profiles. It aims to minimize planning time, reduce costs, and provide extensive exposure for vendors, creating seamless and memorable event experiences.',
     link: { href: 'https://oyoyoapp.com', label: 'oyoyoapp.com' },
-    logo: logoFleek,
+    logo: Oyoyo,
   },
   {
     name: 'Duniya Health Care',
@@ -73,7 +78,7 @@ export const projects = [
       href: 'https://duniyahealthcare.com/',
       label: 'Duniya Health Care',
     },
-    logo: logoUblue,
+    logo: Duniya,
   },
 ]
 

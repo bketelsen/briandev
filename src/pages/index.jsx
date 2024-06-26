@@ -255,7 +255,9 @@ export default function Home({ articles }) {
           </p>
           <p className="prose mt-6 dark:prose-invert">
             Lead Developer with a proven track record of mentoring teams and
-            delivering reliable, innovative solutions.
+            delivering reliable, innovative solutions. Committed to driving
+            success in multiple currencies and markets through robust,
+            full-stack development practices.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
