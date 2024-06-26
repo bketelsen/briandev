@@ -1,24 +1,14 @@
-import logoAmazon from '@/images/logos/aws.svg'
 import BongoHive from '@/images/logos/BongoHive.svg'
 import Duniya from '@/images/logos/Duniya.svg'
 import Lassod from '@/images/logos/Lassod.svg'
 import Oyoyo from '@/images/logos/OYOYO.svg'
-import logoClarity from '@/images/logos/clarity.jpg'
-import logoMicrosoft from '@/images/logos/azure.svg'
-import logoXOR from '@/images/logos/xor.jpg'
-import logoVanilla from '@/images/logos/vanilla.svg'
-import logoFleek from '@/images/logos/fleeksvg.svg'
-import logoUblue from '@/images/logos/ublue.png'
+
 import Lumenalta from '@/images/logos/Lumenalta.svg'
 
-import logoGolang from '@/images/logos/icons8-golang.svg'
-import logoKubernetes from '@/images/logos/kubernetes.svg'
-import logoCaptainhook from '@/images/logos/captainhook.svg'
 const siteMeta = {
   title: 'Aubrey Zulu',
-  description:
-    'Aubrey Zulu is a developer advocate, keynote speaker, author, and open source practitioner.',
-  copyright: 'Aubrey Zulu, CC-BY-SA',
+  description: 'Aubrey Zulu is a Full Stack Software Developer',
+  copyright: 'Aubrey Zulu',
   author: {
     name: 'Aubrey Zulu',
     email: 'me@aubreydarious@gmail.com',
