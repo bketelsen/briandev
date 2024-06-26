@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/future/image'
 import Link from 'next/link'
 import clsx from 'clsx'
