@@ -10,14 +10,13 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon,
 } from '@/components/SocialIcons'
 
-import image3 from '@/images/photos/1102.jpg'
-import image2 from '@/images/photos/20150716-070618871-3.jpg'
-import image1 from '@/images/photos/bike.jpg'
-import image5 from '@/images/photos/band.jpg'
-import image4 from '@/images/photos/BW013.jpg'
+import image3 from '@/images/photos/alone.jpg'
+import image2 from '@/images/photos/night.jpg'
+import image1 from '@/images/photos/colabo.jpg'
+import image5 from '@/images/photos/laptop.jpg'
+import image4 from '@/images/photos/smart.jpg'
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
@@ -240,24 +239,23 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl text-lg">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Cloud Advocate, hacker, and open source enthusiast.
+            Full-stack Software Developer
           </h1>
           <p className="prose mt-6 dark:prose-invert">
-            I’m Brian, and I teach people how to use the Cloud. I’ve been active
-            in Open Source for as long as I’ve been coding &mdash; and that’s a
-            long time.
+            Specializing in payment gateway integration, with deep expertise in
+            Stripe and Paystack implementations. Skilled in building secure,
+            scalable solutions using React.js, Node.js, and React Native for web
+            and mobile platforms.
           </p>
           <p className="prose mt-6 dark:prose-invert">
-            With some friends, I wrote a{' '}
-            <a href="https://www.manning.com/books/go-in-action">
-              book about the Go programming language
-            </a>
-            . I’ve given many <Link href={'/speaking'}>talks</Link> about Go,
-            Distributed Computing, and programming in general.
+            Experienced in optimizing payment flows and creating seamless user
+            experiences across devices. Proficient in both frontend and backend
+            development, with a focus on high-performance e-commerce
+            applications.
           </p>
           <p className="prose mt-6 dark:prose-invert">
-            Poke around and see what I’m up to. It’s all open source, so feel
-            free to contribute.
+            Lead Developer with a proven track record of mentoring teams and
+            delivering reliable, innovative solutions.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

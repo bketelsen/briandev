@@ -8,9 +8,8 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/brian-head.jpg'
+import portraitImage from '@/images/aubrey-head.jpg'
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo'
 
@@ -74,57 +73,35 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Aubrey Zulu. I live in Florida, where I help people across the
-              world learn the Cloud.
+              Hi, I'm Aubrey, a dedicated Software Engineer passionate about
+              crafting elegant solutions in multiple programming languages.
             </h1>
             <div className="prose mt-6 space-y-7 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400">
               <p>
-                Howdy! Thanks for stopping by. I’m Brian and I’ve been doing
-                technology things since{' '}
-                <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">
-                  acoustic modem couplers
-                </a>{' '}
-                were a thing. I love Open Source and exploring different
-                programming languages. Some highlights about me and my
-                activities:
+                In the dynamic and ever-evolving realm of technology, I have
+                found my niche at the crossroads of innovation, creativity, and
+                purpose. As a seasoned software engineer, my journey is woven
+                with a rich tapestry of projects that reflect both my depth of
+                knowledge and my breadth of experience. I pride myself on
+                mastering diverse technologies, from the intricate dance of
+                React's reactivity to the structured elegance of Python and C#'s
+                logic.
               </p>
               <p>
-                <b>Army Veteran:</b> Bradley Fighting Vehicle Gunner, Infantry,
-                1st Armored Division
+                For me, every line of code tells a story. Each function and
+                algorithm is a chapter in a larger narrative of solving
+                real-world challenges, optimizing user experiences, and pushing
+                the boundaries of what's possible. Beyond the code, I cherish
+                the collaborative spirit of this industry. I believe in the
+                power of diverse teams, where each member brings a unique
+                perspective, and together, we craft digital masterpieces.
               </p>
               <p>
-                <b>
-                  Father of <s>four</s> five
-                </b>{' '}
-                with <s>19</s> 21 years difference between oldest and youngest
-                child
-              </p>
-              <p>
-                <b>Co-founded GopherCon</b>{' '}
-                <a href="https://gophercon.com">
-                  the largest conference for Go developers
-                </a>
-                .
-              </p>
-              <p>
-                <b>Co-authored</b>{' '}
-                <a href="https://www.amazon.com/Go-Action-William-Kennedy/dp/1617291781">
-                  Go In Action
-                </a>{' '}
-                for Manning Publishing.
-              </p>
-              <p>
-                <b>Co-wrote</b> Skynet and SkyDNS with Erik St. Martin, which
-                was eventually morphed into the DNS service discovery that
-                powers Kubernetes.
-              </p>
-              <p>
-                <b>Contributed</b> to the largest projects that power the
-                Internet. Go, Kubernetes, Etcd, and so many more.
-              </p>
-              <p>
-                I love Open Source, learning in public, and sharing what I learn
-                with others.
+                "Exploring my portfolio will reveal a combination of technical
+                expertise, strategic thinking, and a commitment to excellence.
+                Whether you're here to collaborate, learn, or simply explore,
+                you'll witness the passion and dedication that drive every
+                project I undertake."
               </p>
             </div>
           </div>
