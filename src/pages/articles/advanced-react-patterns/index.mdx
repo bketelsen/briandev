@@ -1,0 +1,258 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+export const meta = {
+  author: 'Aubrey Zulu',
+  date: '2024-06-27',
+  title: 'Advanced React Patterns',
+  description:
+    'React offers powerful features and patterns that can be leveraged to create highly modular, maintainable, and scalable applications. In this article, we will explore four advanced patterns in React development',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+### Advanced React Patterns
+
+React.js offers powerful features and patterns that can be leveraged to create highly modular, maintainable, and scalable applications. In this article, we will explore four advanced patterns in React development:
+
+1. Component Enhancement with Higher-Order Components (HOCs)
+2. Controlled Components
+3. The Provider Pattern
+4. Compound Components
+
+## 1. Component Enhancement with Higher-Order Components (HOCs)
+
+**Description**
+
+Higher-Order Components (HOCs) are functions that take a component and return a new
+component with enhanced functionality. HOCs are a pattern derived from React’s
+compositional nature, allowing for code reuse and enhancing components with additional behaviors.
+
+**The Problem**
+
+As applications grow, the need to reuse logic across multiple components becomes essential. Without a clear strategy,
+this can lead to code duplication and maintenance challenges.
+
+**Solution**
+
+HOCs provide a way to encapsulate reusable logic and share it across components. By wrapping components with an HOC,
+you can add behavior or data without modifying the original component.
+
+**Example**
+
+```jsx {3,16,21}showLineNumbers
+import React from 'react'
+
+// A simple HOC that adds logging functionality
+const withLogging = (WrappedComponent) => {
+  return class extends React.Component {
+    componentDidMount() {
+      console.log(`Component ${WrappedComponent.name} mounted`)
+    }
+
+    render() {
+      return <WrappedComponent {...this.props} />
+    }
+  }
+}
+
+// A basic component
+const MyComponent = () => {
+  return <div>Hello, world!</div>
+}
+
+// Enhanced component with logging
+const EnhancedComponent = withLogging(MyComponent)
+
+export default EnhancedComponent
+```
+
+## 2. Controlled Components
+
+**Description**
+
+Controlled components are components that do not maintain their own state. Instead, the state is controlled by the parent component,
+allowing for more predictable and testable code.
+
+**The Problem**
+
+Uncontrolled components can lead to difficulties in managing state,
+especially in forms, where synchronization between form inputs and state can become complex and error-prone.
+
+**Solution**
+
+Controlled components rely on props passed from their parent component to manage their state.
+This pattern ensures that the state is always the single source of truth.
+
+**Example**
+
+```jsx showLineNumbers
+import React, { useState } from 'react'
+
+const ControlledInput = () => {
+  const [value, setValue] = useState('')
+
+  const handleChange = (event) => {
+    setValue(event.target.value)
+  }
+
+  return (
+    <div>
+      <input type="text" value={value} onChange={handleChange} />
+      <p>Current value: {value}</p>
+    </div>
+  )
+}
+
+export default ControlledInput
+```
+
+## 3. The Provider Pattern
+
+**Description**
+
+The Provider Pattern is a common way to manage state and dependencies in a React application. It typically involves using React's Context API to create a provider component that supplies state and functions to the rest of the application.
+
+**The Problem**
+
+Passing props down multiple levels (prop drilling) can become cumbersome and difficult to manage. This issue is particularly pronounced in large applications with deeply nested components.
+
+**Solution**
+
+The Provider Pattern allows you to create a centralized store for state and functions, making them accessible to any component in the tree without the need for prop drilling.
+
+**Example**
+
+```jsx {3,6,21,24}showLineNumbers
+import React, { createContext, useContext, useState } from 'react'
+
+// Create a Context
+const ThemeContext = createContext()
+
+// Create a Provider component
+const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light')
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
+  }
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  )
+}
+
+// Custom hook for using the ThemeContext
+const useTheme = () => useContext(ThemeContext)
+
+// Example component using the context
+const ThemeSwitcher = () => {
+  const { theme, toggleTheme } = useTheme()
+
+  return (
+    <div>
+      <p>Current theme: {theme}</p>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+    </div>
+  )
+}
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <ThemeSwitcher />
+    </ThemeProvider>
+  )
+}
+
+export default App
+```
+
+## 4. Compound Components
+
+**Description**
+
+Compound Components are a pattern in which components work together to manage state and behavior. This pattern allows for a more flexible and intuitive API for component consumers.
+
+**The Problem**
+
+Creating complex components with numerous props can lead to bloated and hard-to-manage APIs. Consumers of such components often struggle with understanding and using all the available options correctly.
+
+**Solution**
+
+Compound Components enable the creation of a clean and flexible API by splitting the logic into smaller, self-contained components that work together. This pattern is especially useful for creating complex UI components like tab sets or dropdown menus.
+
+**Example**
+
+```jsx {3,47}showLineNumbers
+import React, { useState, createContext, useContext } from 'react'
+
+// Create a Context for the compound component
+const TabsContext = createContext()
+
+const Tabs = ({ children }) => {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const selectTab = (index) => {
+    setActiveIndex(index)
+  }
+
+  return (
+    <TabsContext.Provider value={{ activeIndex, selectTab }}>
+      <div className="tabs">{children}</div>
+    </TabsContext.Provider>
+  )
+}
+
+const TabList = ({ children }) => {
+  return <div className="tab-list">{children}</div>
+}
+
+const Tab = ({ children, index }) => {
+  const { activeIndex, selectTab } = useContext(TabsContext)
+
+  return (
+    <button
+      className={`tab ${activeIndex === index ? 'active' : ''}`}
+      onClick={() => selectTab(index)}
+    >
+      {children}
+    </button>
+  )
+}
+
+const TabPanels = ({ children }) => {
+  const { activeIndex } = useContext(TabsContext)
+
+  return <div className="tab-panels">{children[activeIndex]}</div>
+}
+
+const TabPanel = ({ children }) => {
+  return <div className="tab-panel">{children}</div>
+}
+
+// Example usage of the compound components
+const App = () => {
+  return (
+    <Tabs>
+      <TabList>
+        <Tab index={0}>Tab 1</Tab>
+        <Tab index={1}>Tab 2</Tab>
+        <Tab index={2}>Tab 3</Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel>Content 1</TabPanel>
+        <TabPanel>Content 2</TabPanel>
+        <TabPanel>Content 3</TabPanel>
+      </TabPanels>
+    </Tabs>
+  )
+}
+
+export default App
+```
+
+**Conclusion**
+
+Understanding and leveraging advanced patterns in React can greatly enhance the maintainability, scalability, and flexibility of your applications. Higher-Order Components, Controlled Components, the Provider Pattern, and Compound Components each offer unique benefits and can be applied to solve specific problems in your development process. By mastering these patterns, you can write more efficient,
+reusable, and clean code in your React projects.
