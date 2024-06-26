@@ -12,13 +12,13 @@ import {
   LinkedInIcon,
   MastodonIcon
 } from '@/components/SocialIcons'
+import portraitImage from '@/images/Me.jpg'
 
-
-import image3 from '@/images/photos/1102.jpg'
-import image2 from '@/images/photos/20150716-070618871-3.jpg'
-import image1 from '@/images/photos/bike.jpg'
-import image5 from '@/images/photos/band.jpg'
-import image4 from '@/images/photos/BW013.jpg'
+// import image3 from '@/images/photos/1102.jpg'
+// import image2 from '@/images/photos/20150716-070618871-3.jpg'
+// import image1 from '@/images/photos/bike.jpg'
+// import image5 from '@/images/photos/band.jpg'
+// import image4 from '@/images/photos/BW013.jpg'
 
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
@@ -181,7 +181,7 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="https://linkedin.com/in/brianketelsen" variant="secondary" className="group mt-6 w-full">
+      <Button href="https://linkedin.com/in/christian-solis1/" variant="secondary" className="group mt-6 w-full">
                More on LinkedIn 
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -189,38 +189,38 @@ function Resume() {
   )
 }
 
-function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+// function Photos() {
+//   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
-  return (
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length]
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
+//   return (
+//     <div className="mt-16 sm:mt-20">
+//       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+//         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+//           <div
+//             key={image.src}
+//             className={clsx(
+//               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+//               rotations[imageIndex % rotations.length]
+//             )}
+//           >
+//             <Image
+//               src={image}
+//               alt=""
+//               sizes="(min-width: 640px) 18rem, 11rem"
+//               className="absolute inset-0 h-full w-full object-cover"
+//             />
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
 
 export default function Home({ articles }) {
   return (
     <>
     <NextSeo
-      title="Brian Ketelsen"
+      title="Christian Solis"
       description={siteMeta.description}
       canonical="https://brian.dev/"
       openGraph={{
@@ -240,38 +240,16 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl text-lg">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Cloud Advocate, hacker, and open source enthusiast.
+          Christian Solis
           </h1>
           <p className="mt-6 prose dark:prose-invert">
-            I’m Brian, and I teach people how to use the Cloud. I’ve been active in Open Source for as long as I’ve been coding &mdash; and that’s a long time.
-          </p>
-          <p className="mt-6 prose dark:prose-invert">
-            With some friends, I wrote a <a href="https://www.manning.com/books/go-in-action">book about the Go programming language</a>.
-             I’ve given many <Link href={"/speaking"} >talks</Link> about Go, Distributed Computing, and programming in general.
-          </p>
-          <p className="mt-6 prose dark:prose-invert">
-            Poke around and see what I’m up to. It’s all open source, so feel free to contribute.
+          Former sports producer, now turned QA Engineer based out of Chicago
+          where I 'break stuff' for a living.
           </p>
           <div className="mt-6 flex gap-6">
+      
             <SocialLink
-              href={siteMeta.author.twitter}
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href={siteMeta.author.mastodon}
-              aria-label="Follow on Mastodon"
-              icon={MastodonIcon}
-              rel="me"
-            />
-
-            <SocialLink
-              href={siteMeta.author.instagram}
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
+              href="https://github.com/tacoholic"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
@@ -280,17 +258,22 @@ export default function Home({ articles }) {
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
+              <SocialLink
+            href={`mailto:${siteMeta.author.email}`}
+              aria-label="Follow on LinkedIn"
+              icon={MailIcon}
+            />
           </div>
         </div>
       </Container>
-      <Photos />
+      {/* <Photos /> */}
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-1">
+          {/* <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
-          </div>
+          </div> */}
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
             <Resume />

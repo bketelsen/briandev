@@ -1,17 +1,18 @@
 import Image from 'next/future/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
+import { Button,ArrowDownIcon } from '@/components/Button'
 import { Container } from '@/components/Container'
 import {
   TwitterIcon,
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon
+  MastodonIcon,
+  BriefcaseIcon
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/brian-head.jpg'
-import siteMeta from '@/data/siteMeta'
+import portraitImage from '@/images/Me.jpg'
+import siteMeta, {Resume} from '@/data/siteMeta'
 import { NextSeo } from 'next-seo';
 
 
@@ -29,6 +30,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
   )
 }
 
+
 function MailIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -44,7 +46,7 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About - Brian Ketelsen"
+        title="About - Christian Solis"
         description={siteMeta.description}
         canonical="https://brian.dev/about"
         openGraph={{
@@ -74,51 +76,18 @@ export default function About() {
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Brian Ketelsen. I live in Florida, where I help people
-              across the world learn the Cloud.
-            </h1>
+            {/* <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+             Hello!
+            </h1> */}
             <div className="mt-6 text-lg prose space-y-7 dark:prose-invert text-zinc-600 dark:text-zinc-400">
               <p>
-                Howdy! Thanks for stopping by. I’m Brian and I’ve been doing technology
-                things since <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">acoustic
-                  modem couplers</a> were a thing. I love Open Source and exploring different programming languages.
-                Some highlights about me and my activities:
-              </p>
-              <p>
-                <b>Army Veteran:</b> Bradley Fighting Vehicle Gunner, Infantry, 1st Armored Division
-              </p>
-              <p>
-                <b>Father of <s>four</s> five</b> with <s>19</s> 21 years difference between oldest and youngest child
-              </p>
-              <p>
-                <b>Co-founded GopherCon</b> <a href="https://gophercon.com">the largest conference for Go developers</a>.
-              </p>
-              <p>
-                <b>Co-authored</b> <a href="https://www.amazon.com/Go-Action-William-Kennedy/dp/1617291781">Go In Action</a> for Manning Publishing.
-              </p>
-              <p>
-                <b>Co-wrote</b> Skynet and SkyDNS with Erik St. Martin, which was eventually morphed into the DNS service discovery that powers Kubernetes.
-              </p>
-              <p>
-                <b>Contributed</b> to the largest projects that power the Internet. Go, Kubernetes, Etcd, and so many more.
-              </p>
-              <p>
-                I love Open Source, learning in public, and sharing what I learn with others.
+              Hello, my name is Christian Solis. I am a QA Engineer/SDET with experience in manual and automated testing, and the Agile Methodology (Scrum). I consider it a personal challenge to continually find creative ways to break an app in order to increase reliability, scalability, and efficiency.
+              I have a solid knowledge of the Software Development Cycle, proactively collaborating with Engineers and Product Managers, and have managed projects for multiple apps, each with at least 10,000 users. My innate ability to understand business requirements leads me to come up with elaborate test cases for use-case scenarios. 
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href={siteMeta.author.twitter} icon={TwitterIcon}>
-                Follow on Twitter
-              </SocialLink>
-              <SocialLink href={siteMeta.author.mastodon} icon={MastodonIcon} className="mt-4">
-                Follow on Mastodon
-              </SocialLink>
-              <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
-              </SocialLink>
               <SocialLink href={siteMeta.author.github} icon={GitHubIcon} className="mt-4">
                 Follow on GitHub
               </SocialLink>
@@ -128,14 +97,16 @@ export default function About() {
               <SocialLink
                 href={`mailto:${siteMeta.author.email}`}
                 icon={MailIcon}
-                className="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-700/40"
+                className="mt-4"
               >
                 {siteMeta.author.email}
               </SocialLink>
             </ul>
           </div>
         </div>
+        
       </Container>
     </>
   )
 }
+

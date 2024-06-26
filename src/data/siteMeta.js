@@ -6,22 +6,25 @@ import logoXOR from '@/images/logos/xor.jpg'
 import logoVanilla from '@/images/logos/vanilla.svg'
 import logoFleek from '@/images/logos/fleeksvg.svg'
 import logoUblue from '@/images/logos/ublue.png'
-
+import logoSM from "@/images/logos/schoolmint_logo.jpeg"
 import logoGolang from '@/images/logos/icons8-golang.svg'
 import logoKubernetes from '@/images/logos/kubernetes.svg'
 import logoCaptainhook from '@/images/logos/captainhook.svg'  
+import logoCrush from '@/images/logos/CrushData.jpeg'
+import logoBlush from '@/images/logos/blush.jpeg'
+import logoESPN from "@/images/logos/ESPN_E_icon.svg.png"
 const siteMeta = {
-    title: "Brian Ketelsen",
-    description: "Brian Ketelsen is a developer advocate, keynote speaker, author, and open source practitioner.",
-    copyright: "Brian Ketelsen, CC-BY-SA",
+    title: "Christian Solis",
+    description: "Christian Solis is a QA Engineer based out of Chicago.",
+    copyright: "Christian Solis, CC-BY-SA",
     author: {
-        name: "Brian Ketelsen",
-        email: "me@brian.dev",
+        name: "Christian Solis",
+        email: "mail@christiansolis.me",
         twitter: "https://twitter.com/bketelsen",
         mastodon: "https://tty0.social/@bketelsen",
         instagram: "https://instagram.com/bketelsen",
-        github: "https://github.com/bketelsen",
-        linkedin: "https://linkedin.com/in/brianketelsen",
+        github: "https://github.com/tacoholic",
+        linkedin: "https://www.linkedin.com/in/christian-solis1/",
         twitch: "https://twitch.tv/bketelsen",
         youtube: "https://youtube.com/@bketelsen",
     },
@@ -29,35 +32,35 @@ const siteMeta = {
 }
  export const resume = [
     {
-      company: 'Amazon',
-      title: 'Principal Developer Advocate',
-      logo: logoAmazon,
-      start: '2022',
+      company: 'SchoolMint, Inc.',
+      title: 'QA Engineer',
+      logo: logoSM,
+      start: '2020',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Microsoft',
-      title: 'Principal Cloud Developer Advocate',
-      logo: logoMicrosoft,
-      start: '2017',
-      end: '2022',
+      company: 'CrushData, LLC. (Contract)' ,
+      title: 'Support Engineer',
+      logo: logoCrush,
+      start: '2019',
+      end: '2020',
     },
     {
-      company: 'XOR Data Exchange',
-      title: 'CIO',
-      logo: logoXOR,
-      start: '2014',
-      end: '2016',
+      company: 'Blush Data App (Contract)',
+      title: 'QA Engineer',
+      logo: logoBlush,
+      start: '2019',
+      end: '2019',
     },
     {
-      company: 'Clarity Services, Inc.',
-      title: 'COO',
-      logo: logoClarity,
+      company: 'ESPN',
+      title: 'Producer',
+      logo: logoESPN,
       start: '2008',
-      end: '2014',
+      end: '2018',
     },
   ]
 export const projects = [
