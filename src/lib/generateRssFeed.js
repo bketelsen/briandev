@@ -8,18 +8,18 @@ export async function generateRssFeed() {
   let articles = await getAllArticles()
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   let author = {
-    name: 'Brian Ketelsen',
-    email: 'me@brian.dev',
+    name: 'Christian Solis',
+    email: 'mail@christiansolis.me',
   }
 
   let feed = new Feed({
     title: author.name,
-    description: 'Brian Ketelsen - Blog',
+    description: 'Christian Solis - Website',
     author,
     id: siteUrl,
     link: siteUrl,
-    image: `${siteUrl}/favicon.ico`,
-    favicon: `${siteUrl}/favicon.ico`,
+    // image: `${siteUrl}/favicon.ico`,
+    // favicon: `${siteUrl}/favicon.ico`,
     copyright: `All rights reserved ${new Date().getFullYear()}`,
     feedLinks: {
       rss2: `${siteUrl}/rss/feed.xml`,

@@ -42,7 +42,7 @@ export default function ArticlesIndex({ articles }) {
     return (
         <>
     <NextSeo
-      title="Articles - Brian Ketelsen"
+      title="Articles - Christian Solis"
       description={siteMeta.description}
       canonical="https://brian.dev/liam"
       openGraph={{

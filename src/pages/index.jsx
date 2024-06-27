@@ -185,6 +185,10 @@ function Resume() {
                More on LinkedIn 
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
+      <Button href="https://docs.google.com/document/d/1fH0sEJ-cYbG5O0Pjca6rvZ3QRB74Fj9yDjQiU3z6Ggc/export?format=pdf" variant="secondary" className="group mt-6 w-full">
+               Resume
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      </Button>
     </div>
   )
 }
@@ -219,33 +223,37 @@ function Resume() {
 export default function Home({ articles }) {
   return (
     <>
-    <NextSeo
+    {/* <NextSeo
       title="Christian Solis"
       description={siteMeta.description}
-      canonical="https://brian.dev/"
+      canonical="linkedin.com/in/christian-solis1/"
       openGraph={{
-        url: 'https://brian.dev',
+        url: 'linkedin.com/in/christian-solis1/',
         images: [
           {
-            url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+            url: `https://og.myurlgoeshere./api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'brian.dev',
+        siteName: 'linkedin.com/in/christian-solis1/',
       }}
-    />
+    /> */}
       <Container className="mt-9">
         <div className="max-w-2xl text-lg">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
           Christian Solis
           </h1>
-          <p className="mt-6 prose dark:prose-invert">
+          <p className="mt-6 font-bold prose dark:prose-invert">
           Former sports producer, now turned QA Engineer based out of Chicago
           where I 'break stuff' for a living.
           </p>
+          <p className="mt-6 prose dark:prose-invert">
+          Hello, my name is Christian Solis. I am a QA Engineer/SDET with experience in manual and automated testing, and the Agile Methodology (Scrum). I consider it a personal challenge to continually find creative ways to break an app in order to increase reliability, scalability, and efficiency. I have a solid knowledge of the Software Development Cycle, proactively collaborating with Engineers and Product Managers, and have managed projects for multiple apps, each with at least 10,000 users. My innate ability to understand business requirements leads me to come up with elaborate test cases for use-case scenarios.
+          </p>
+          
           <div className="mt-6 flex gap-6">
       
             <SocialLink

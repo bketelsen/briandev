@@ -45,24 +45,24 @@ function MailIcon(props) {
 export default function About() {
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title="About - Christian Solis"
         description={siteMeta.description}
-        canonical="https://brian.dev/about"
+        canonical=""
         openGraph={{
-          url: 'https://brian.dev/about',
+          url: 'linkedin.com/in/christian-solis1/',
           images: [
             {
-              url: `https://og.brian.dev/api/og?title=About&desc=${siteMeta.description}`,
+              url: `https://myurlgoeshere/api/og?title=About&desc=${siteMeta.description}`,
               width: 1200,
               height: 600,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
             }
           ],
-          siteName: 'brian.dev',
+          siteName: '',
         }}
-      />
+      /> */}
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">

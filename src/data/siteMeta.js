@@ -28,7 +28,7 @@ const siteMeta = {
         twitch: "https://twitch.tv/bketelsen",
         youtube: "https://youtube.com/@bketelsen",
     },
-    siteUrl: "https://brian.dev"
+    siteUrl: ""
 }
  export const resume = [
     {
