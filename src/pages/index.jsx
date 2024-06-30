@@ -253,12 +253,12 @@ export default function Home({ articles }) {
             development, with a focus on high-performance e-commerce
             applications.
           </p>
-          <p className="prose mt-6 dark:prose-invert">
+          {/* <p className="prose mt-6 dark:prose-invert">
             Lead Developer with a proven track record of mentoring teams and
             delivering reliable, innovative solutions. Committed to driving
             success in multiple currencies and markets through robust,
             full-stack development practices.
-          </p>
+          </p> */}
           <div className="mt-6 flex gap-6">
             <SocialLink
               href={siteMeta.author.twitter}
