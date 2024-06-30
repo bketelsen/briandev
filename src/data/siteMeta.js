@@ -2,6 +2,7 @@ import BongoHive from '@/images/logos/BongoHive.svg'
 import Duniya from '@/images/logos/Duniya.svg'
 import Lassod from '@/images/logos/Lassod.svg'
 import Oyoyo from '@/images/logos/OYOYO.svg'
+import Lea from '@/images/logos/lea.svg'
 
 import Lumenalta from '@/images/logos/Lumenalta.svg'
 
@@ -69,6 +70,16 @@ export const projects = [
       label: 'Duniya Health Care',
     },
     logo: Duniya,
+  },
+  {
+    name: 'The Youth Development Fund (YDF)',
+    description:
+      'The Youth Development Fund (YDF) website by the Local Enterprise Authority (LEA) in Botswana is designed to support young entrepreneurs. It provides information on funding opportunities, application processes, and success stories to help youth grow their businesses. The site aims to empower young people by offering financial support, resources, and mentorship, contributing to economic development',
+    link: {
+      href: 'https://ydf.lea.co.bw/#/',
+      label: 'ydf.lea.co.bw',
+    },
+    logo: Lea,
   },
 ]
 
