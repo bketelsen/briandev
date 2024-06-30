@@ -250,8 +250,7 @@ export default function Home({ articles }) {
           <p className="prose mt-6 dark:prose-invert">
             Experienced in optimizing payment flows and creating seamless user
             experiences across devices. Proficient in both frontend and backend
-            development, with a focus on high-performance e-commerce
-            applications.
+            development.
           </p>
           {/* <p className="prose mt-6 dark:prose-invert">
             Lead Developer with a proven track record of mentoring teams and
