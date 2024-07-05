@@ -248,7 +248,7 @@ export default function Home({ articles }) {
           </h1>
           <p className="mt-6 font-bold prose dark:prose-invert">
           Former sports producer, now turned QA Engineer based out of Chicago
-          where I 'break stuff' for a living.
+          where I break things for a living.
           </p>
           <p className="mt-6 prose dark:prose-invert">
           Hello, my name is Christian Solis. I am a QA Engineer/SDET with experience in manual and automated testing, and the Agile Methodology (Scrum). I consider it a personal challenge to continually find creative ways to break an app in order to increase reliability, scalability, and efficiency. I have a solid knowledge of the Software Development Cycle, proactively collaborating with Engineers and Product Managers, and have managed projects for multiple apps, each with at least 10,000 users. My innate ability to understand business requirements leads me to come up with elaborate test cases for use-case scenarios.
