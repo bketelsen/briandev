@@ -35,7 +35,7 @@ function Article({ article }) {
 }
 
 export default function ArticlesIndex({ articles }) {
-  const headline = 'WORK IN PROGRESS'
+  const headline = "WORK IN PROGRESS"
   const intro="All of my long-form thoughts on programming, leadership, infrastructure, and more, collected in chronological order."
 
   return (
@@ -45,17 +45,17 @@ export default function ArticlesIndex({ articles }) {
       description={siteMeta.description}
       canonical="https://brian.dev/articles"
       openGraph={{
-        url: 'https://brian.dev/articles',
+        url: "https://brian.dev/articles",
         images: [
           {
             url: `https://og.brian.dev/api/og?title=Articles&desc=${headline}`,
             width: 1200,
             height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
+            alt: "Og Image Alt",
+            type: "image/jpeg",
           }
         ],
-        siteName: 'brian.dev',
+        siteName: "brian.dev",
       }}
     />
       <SimpleLayout
