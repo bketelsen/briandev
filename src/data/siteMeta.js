@@ -49,7 +49,7 @@ const siteMeta = {
       end: '2020',
     },
     {
-      company: 'Blush Data App (Contract)',
+      company: 'Blush Dating App (Contract)',
       title: 'QA Engineer',
       logo: logoBlush,
       start: '2019',
