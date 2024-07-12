@@ -1,5 +1,5 @@
 import BongoHive from '@/images/logos/BongoHive.svg'
-import Duniya from '@/images/logos/Duniya.svg'
+import Duniya from '@/images/logos/Duniya.svg.svg'
 import Lassod from '@/images/logos/Lassod.svg'
 import Oyoyo from '@/images/logos/OYOYO.svg'
 import Lea from '@/images/logos/lea.svg'
