@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 
 import { Card } from '@/components/Card'
