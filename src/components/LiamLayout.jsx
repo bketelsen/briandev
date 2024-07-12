@@ -1,10 +1,10 @@
-import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/navigation'
 
 import { Container } from '@/components/Container'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
-import {Bookmark} from '@/components/Bookmark'
+import { Bookmark } from '@/components/Bookmark'
 
 function ArrowLeftIcon(props) {
   return (
@@ -25,7 +25,7 @@ export function LiamLayout({
   isRssFeed = false,
   previousPathname,
 }) {
-  let router = useRouter()
+  const router = useRouter()
 
   if (isRssFeed) {
     return children
@@ -33,24 +33,24 @@ export function LiamLayout({
 
   return (
     <>
-    <NextSeo
-      title={meta.title}
-      description={meta.description}
-      canonical={`https://aubreyzulu.com${router.pathname}`}
-      openGraph={{
-        url: `https://aubreyzulu.com${router.pathname}`,
-        images: [
-          {
-            url: `https://og.aubreyzulu.com/api/og?title=${meta.title}&desc=${meta.description}&imgUrl=https://aubreyzulu.com/fixed/images/IMG_7808.png`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'aubreyzulu.com',
-      }}
-    />
+      <NextSeo
+        title={meta.title}
+        description={meta.description}
+        canonical={`https://aubreyzulu.com${router.pathname}`}
+        openGraph={{
+          url: `https://aubreyzulu.com${router.pathname}`,
+          images: [
+            {
+              url: `https://og.aubreyzulu.com/api/og?title=${meta.title}&desc=${meta.description}&imgUrl=https://aubreyzulu.com/fixed/images/IMG_7808.png`,
+              width: 1200,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'aubreyzulu.com',
+        }}
+      />
       <Container className="mt-16 lg:mt-32">
         <div className="xl:relative">
           <div className="mx-auto max-w-2xl">
@@ -80,12 +80,13 @@ export function LiamLayout({
               <Prose className="mt-8">{children}</Prose>
             </article>
             <Bookmark
-                    image="/fixed/images/amazon.jpg"
-                    href="https://www.amazon.com/hz/wishlist/ls/RX5BWOO4424G?ref_=wl_share"
-                    title="Liam's Amazon Wishlist"
-                >
-                    Send Liam some cheer from his Amazon Wishlist, specifically curated for his unique needs.
-                </Bookmark>
+              image="/fixed/images/amazon.jpg"
+              href="https://www.amazon.com/hz/wishlist/ls/RX5BWOO4424G?ref_=wl_share"
+              title="Liam's Amazon Wishlist"
+            >
+              Send Liam some cheer from his Amazon Wishlist, specifically
+              curated for his unique needs.
+            </Bookmark>
           </div>
         </div>
       </Container>

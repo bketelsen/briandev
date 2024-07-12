@@ -1,5 +1,5 @@
-import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/navigation'
 
 import { Container } from '@/components/Container'
 import { formatDate } from '@/lib/formatDate'
@@ -24,31 +24,31 @@ export function ArticleLayout({
   isRssFeed = false,
   previousPathname,
 }) {
-  let router = useRouter()
+  const router = (isRssFeed ? () => ({ back() {} }) : useRouter)()
 
   if (isRssFeed) {
     return children
   }
   return (
     <>
-    <NextSeo
-      title={meta.title}
-      description={meta.description}
-      canonical={`https://aubreyzulu.com${router.pathname}`}
-      openGraph={{
-        url: `https://aubreyzulu.com${router.pathname}`,
-        images: [
-          {
-            url: `https://og.aubreyzulu.com/api/og?title=${meta.title}&desc=${meta.description}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'aubreyzulu.com',
-      }}
-    />
+      <NextSeo
+        title={meta.title}
+        description={meta.description}
+        canonical={`https://aubreyzulu.com${router.pathname}`}
+        openGraph={{
+          url: `https://aubreyzulu.com${router.pathname}`,
+          images: [
+            {
+              url: `https://og.aubreyzulu.com/api/og?title=${meta.title}&desc=${meta.description}`,
+              width: 1200,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'aubreyzulu.com',
+        }}
+      />
       <Container className="mt-16 lg:mt-32">
         <div className="xl:relative">
           <div className="mx-auto max-w-2xl">
