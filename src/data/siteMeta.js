@@ -58,7 +58,7 @@ export const projects = [
     name: 'OYOYO Events',
     description:
       'Oyoyo Events is an AI-powered event management platform designed to simplify and enhance the event planning experience. It connects event planners, vendors, and attendees, offering tools to optimize event layouts, streamline coordination, and facilitate secure transactions. The platform helps attendees discover and register for events, while vendors can showcase their services and manage their profiles. It aims to minimize planning time, reduce costs, and provide extensive exposure for vendors, creating seamless and memorable event experiences.',
-    link: { href: 'https://oyoyoapp.com', label: 'oyoyoapp.com' },
+    link: { href: 'https://www.event.oyoyoapp.com/', label: 'oyoyoapp.com' },
     logo: Oyoyo,
   },
   {
