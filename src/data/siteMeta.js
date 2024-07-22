@@ -81,6 +81,16 @@ export const projects = [
     },
     logo: Lea,
   },
+  {
+    name: 'Authentication Service',
+    description:
+      'The Authentication Service project is a secure and robust authentication system built using Next.js, Next-auth (Auth.js), Prisma, and Tailwind CSS. It offers a range of features including multi-provider authentication (email/password, Google, GitHub), forgot password functionality, email verification, two-factor authentication (2FA), and role-based access control. With user-friendly components for login, registration, and account management, this project ensures a seamless and secure user experience.',
+    link: {
+      href: 'auth-service.aubreyzulu.com',
+      label: 'authentication service',
+    },
+    logo: Duniya,
+  },
 ]
 
 export default siteMeta
