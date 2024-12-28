@@ -1,0 +1,38 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import {Callout} from '@/components/Callout'
+
+export const meta = {
+  author: 'Christian Solis',
+  date: '2024-01-12',
+  title: 'Data Test IDs in Cypress',
+  description:
+    'Why I love using them.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+When I got hired at my current job, the testing suite was in its early stages.  
+My job was to come in and add more test coverage to the suite.  
+
+
+Initially, when I was  writing my tests, I used to query an element by getting its classname. 
+For instance, to create a click action, I would write up the command the following way:
+
+_cy.get(.classname).click();_
+
+There is nothing wrong, at least I thought, with the way I had written the tests. They were working and passing. Life in the testing world was good until refactor time came around. 
+As a result, several tests were failing. 
+They weren’t failing because my tests were written bad 
+or because there was an actual bug. These tests were failing because the classnames were changing 
+as a result of changes in the developers code. 
+
+
+I realized that this could potentially happen again in the future - tests failing because there was a change in the classname. 
+
+I came across the concept of using data-test-attributes.  This was a game changer! 
+So instead of querying an element by using a classname, with a data test attribute, I now query an element the following way:
+
+_cy.get(``data-test-id=”idName”``).click();_
+
+## Conclusion
+The biggest takeaway is that data test attributes are designed for testing purposes only.  So no matter how many changes are done in the developers code, a data test attribute is shield from those changes.   A regular id (#id) will not be 100 percent shielded since it can be used for css styling and/or Javascript functionality. 
