@@ -1,0 +1,92 @@
+import { ArticleLayout} from '@/components/ArticleLayout'
+import {Callout} from '@/components/Callout'
+
+
+export const meta = {
+  author: 'Christian Solis',
+  date: '2024-02-14',
+  title: 'Refactoring Adventures',
+  description:
+    'Putting arrays and forEach loops to use in my tests' ,
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+When I initially started writing tests in Cypress, there was A LOT of DRY code. As time has passed, I have come to practice the following when writing automated tests:  if there’s an opportunity to refactor, so that you get rid of DRY code, you should. 
+
+In this example, I was testing form validation; There are 8 text inputs on this form, and I needed to make sure that you cannot enter more than 100 characters per input. If you do, an alert will appear saying that it’s invalid.
+
+This is how I initially had it written:
+```
+describe("Form Validation", () => {
+  TestRunner.addTestCase("Inputs cannot surpass 100 characters", () => {
+    cy.get(`[formcontrolname="input1"]`).type(text);
+    cy.get(`[formcontrolname="input2"]`).type(text);
+    cy.get(`[formcontrolname="input3"]`).type(text);
+    cy.get(`[formcontrolname="input4"]`).type(text);
+    cy.get(`[formcontrolname="input5"]`).type(text);
+    cy.get(`[formcontrolname="input6"]`).type(text);
+    cy.get(`[formcontrolname="input7"]`).type(text);
+    cy.get(`[formcontrolname="input8"]`).type(text);
+  });
+});
+```
+As you can see, there is a lot repetition of the same code.
+
+After doing some research, I realized that there was a way to refactor this: create an array that I can loop through.
+
+So I started by creating the array which stores the formcontrolnames:
+
+```
+const formNamesData = [
+    "input1",
+    "input2",
+    "input3",
+    "input4",
+    "input5",
+    "input6",
+    "input7",
+    "input8"
+];
+```
+
+Next, I used a forEach loop to iterate through the _formNamesData_
+```
+describe("Form Validation", () => {
+    const formNamesData = [
+    "input1",
+    "input2",
+    "input3",
+    "input4",
+    "input5",
+    "input6",
+    "input7",
+    "input8"
+];
+
+const randomText = ._.times(105, () => _.random(35).toString(36)).join("");
+
+  TestRunner.addTestCase("Inputs cannot surpass 100 characters", () => {
+    formNamesData.forEach((formName) => {
+        HelperMethods.typeTextIntoInput(formName, randomText);
+        cy.get(".error-alert")
+        .should("exist")
+        .and("contain",`${formName} must be shorter than or equal to 100 characters`);
+    })
+  });
+});
+
+//Helper Method
+public typeTextIntoInput(formControlName:string, text:string){
+    cy.get(`[formcontrolname="${formControlName}"]`).type(text);
+}
+
+```
+
+So I used a forEach loop to iterate through the formcontrol names on the form.  Within
+that loop, I called on a helper method _typeTextIntoInput()_ that will type text _(randomText)_
+into each text input seperately. Finally, I wrote an assert that checks that the alert is visible and 
+that the text within that alert matches the proper form where the error is ocurring. 
+## Conclusion
+Using an array to store data and then loop through it is a great way to avoid and/or reduce DRY code.  In my case, 
+I have been able to reduce the amount of lines code signifanctly, making my tests more robust and easier to read.
