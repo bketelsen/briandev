@@ -1,0 +1,34 @@
+import { ArticleLayout} from '@/components/ArticleLayout'
+import {Callout} from '@/components/Callout'
+
+
+export const meta = {
+  author: 'Christian Solis',
+  date: '2024-03-15',
+  title: 'Automated Test Coverage',
+  description:
+    'Determining what should be covered' ,
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+When building out a test suite, the following question always arises:
+
+_What needs coverage? What deserves coverage?_  
+
+This can be an overwhelming question with never-ending answers.   
+
+However, there are certain things I feel that should be considered when determining your apps test coverage. 
+
+## CORE FEATURES 
+What defines your app?  Based on that answer, you may get the answer to what the core features are. They are the backbone of the app and are precisely why the app exists.
+
+## CODE THAT IS CONSTANTLY CHANGING
+Are you constantly rolling out fixes for a certain feature?  Maybe you’re refactoring code for performance issues. Tests will definitely come in handy here.
+
+## Conclusion
+I know this is brief, but I feel it gives you enough to think about when determining what to cover. At least, initially. 
+Feel free to email me with your throughts at: mail@christiansolis.me.
+ 
+
+. 
